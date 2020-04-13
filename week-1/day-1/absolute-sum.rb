@@ -9,12 +9,12 @@ a = Integer(gets.chomp)
 print "Enter the second number: "
 b = Integer(gets.chomp)
 
-# Checks if the first number is negative
+# Checks if the first number is negative and turns into positive
 if a < 0
     a = a + ((a * -1) * 2)
 end
 
-# Checks if the second number is (also) negative
+# Checks if the second number is negative and turns into positive
 if b < 0
     b = b + ((b * -1) * 2)
 end
