@@ -4,13 +4,11 @@ def hailstone(x)
     until x == 1
         if x % 2 == 0
             x = x / 2
-            puts "#{steps + 1}.- #{x}"
-            steps += 1
         else
             x = x * 3 + 1
-            puts "#{steps + 1}.- #{x}"
-            steps += 1
         end
+        steps += 1
+        puts "#{steps}.- #{x}"
     end
     puts "This hailstone sequence took #{steps} steps!"
 end
