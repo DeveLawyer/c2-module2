@@ -10,10 +10,10 @@ def hailstone(x)
         steps += 1
         puts "#{steps}.- #{x}"
     end
-    puts "This hailstone sequence took #{steps} steps!"
+    steps
 end
 
 print "Enter a number: "
 num = gets.chomp.to_i
 
-puts hailstone(num)
+hailstone(num)
