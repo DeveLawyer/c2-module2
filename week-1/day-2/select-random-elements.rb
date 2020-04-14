@@ -1,8 +1,8 @@
 def random_select(array, n)
-  random_num = array[rand(array.length)]
+  random_elem = array[rand(array.length)]
   random_array = []
   n.times do
-    random_array.push(random_num)
+    random_array.push(random_elem)
   end
   random_array
 end
