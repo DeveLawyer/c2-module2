@@ -1,6 +1,6 @@
 =begin
-    gets.chomp result is a string
-    we need to convert to a float to operate
+  gets.chomp result is a string
+  we need to convert to a float to operate
 =end
 
 print "Show me the weight (kg): "
