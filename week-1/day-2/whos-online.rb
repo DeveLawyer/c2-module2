@@ -1,23 +1,17 @@
 def who_is_online(arr)
-  status_hash = {}
+  status_hash = Hash.new { |hash, prop| hash[prop] = [] }
   arr.each do |person|
     if person["last_activity"] > 10 && person["status"] != "offline"
       person["status"] = "away"
     end
-    
-  # person.each do |prop, val|
-  #   if person[prop] == "status"
-  #     status_hash = person["username"]
-  #   end
-  # end
   
     case person["status"]
       when "online"
-        status_hash["online"] = Array(person["username"])
+        status_hash["online"] << person["username"]
       when "offline"
-        status_hash["offline"] = Array(person["username"])
+        status_hash["offline"] << person["username"]
       when "away"
-        status_hash["away"] = Array(person["username"])
+        status_hash["away"] << person["username"]
     end
   end
   status_hash
