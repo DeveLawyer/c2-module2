@@ -1,5 +1,5 @@
 def max(numbers)
-    highest_so_far = nil.to_i
+    highest_so_far = numbers[0]
     numbers.each { |number|
         number > highest_so_far ? highest_so_far = number : nil 
     }
@@ -7,7 +7,7 @@ def max(numbers)
 end
 
 def min(numbers)
-    lowest_so_far = nil.to_i
+    lowest_so_far = numbers[0]
     numbers.each { |number|
         number < lowest_so_far ? lowest_so_far = number : nil 
     }
