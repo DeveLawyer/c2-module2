@@ -2,7 +2,7 @@
 
 def each(arr)
   for element in arr do
-    yield (element)
+    yield(element)
   end
 end
 
