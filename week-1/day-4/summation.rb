@@ -1,8 +1,6 @@
 def summation(n)
   sum = 0
-  for num in 1..n do
-    sum += yield(num)
-  end
+  (1..n).each { |val| sum += yield(val) }
   sum
 end
   
