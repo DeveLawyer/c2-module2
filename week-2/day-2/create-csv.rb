@@ -1,4 +1,6 @@
-require "csv"
+# frozen_string_literal: true
+
+require 'csv'
 
 # Struct is another built in class from the standard library.
 # It allows to define Classes that only have some properties on the fly
@@ -15,20 +17,20 @@ Student = Struct.new(:name, :email)
 
 # Generates a CSV string from the students.
 def generate_csv(students)
-    csv_string = CSV.generate do |csv|
-        students.each do |student|
-            csv << [student[:name], student[:email]]
-        end
+  csv_string = CSV.generate do |csv|
+    students.each do |student|
+      csv << [student[:name], student[:email]]
     end
-    csv_string
+  end
+  csv_string
 end
 
 students = [
-  Student.new("Julio", "jnavarro@able.co"),
-  Student.new("ximena", "ximena@able.co"),
-  Student.new("diego", "diego@able.co"),
-  Student.new("jordi", "jordi@able.co"),
-  Student.new("andres", "andres@able.co"),
+  Student.new('Julio', 'jnavarro@able.co'),
+  Student.new('ximena', 'ximena@able.co'),
+  Student.new('diego', 'diego@able.co'),
+  Student.new('jordi', 'jordi@able.co'),
+  Student.new('andres', 'andres@able.co')
 ]
 
 puts generate_csv(students)
